@@ -1,0 +1,120 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:src="@drawable/image"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/imageView"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+      >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Make your mapping data visible to the"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/textView"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/scrollView"
+            android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="241dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Have you ever wondered how your organization could add your mapping data, such as aerial imagery or places of interest, to Google Maps and Google Earth? Maybe you're using the Google Maps API and want to enrich our base map with your own data. You're not alone."
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/textView2" />
+
+</ScrollView>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <EditText
+            android:id="@+id/ts"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:hint="Typing location name"
+            android:inputType="text"
+            android:maxLines="1" />
+        <Button android:id="@+id/Bsearch"
+            android:layout_alignParentRight="true"
+            android:text="Search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/lati"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="Latitude "
+
+         />
+        <EditText
+            android:id="@+id/lon"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="longitude "/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:text="submit"
+            android:onClick="onlatLngSearch"
+            android:id="@+id/sub"
+            android:layout_gravity="right" />
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:background="@drawable/sate"
+            android:id="@+id/stb"
+            android:onClick="changeType"
+            android:nestedScrollingEnabled="false"
+            android:layout_gravity="right" />
+
+    </LinearLayout>
+
+
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="388dp"
+        android:layout_height="270dp" android:id="@+id/map" tools:context=".MapsActivity"
+        android:name="com.google.android.gms.maps.SupportMapFragment" />
+
+
+</LinearLayout>
